@@ -1,4 +1,6 @@
+<!-- este template se muestra dentro de apps, la cual esta dentro de la carpeta layouts -->
 @extends('layouts.app')
+<!-- esta vista inyecta la variable $viewData["title"] en @yield('title') de layouts.app -->
 @section('title', $viewData["title"])
 @section('content')
 <div class="row">
