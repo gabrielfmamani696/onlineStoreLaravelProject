@@ -42,8 +42,8 @@
             <small>
                 Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank"
                     href="https://twitter.com">
-                    Daniel Correa
-                </a> - <b>Paola Vallejo</b>
+                    Twitter
+                </a> - <b>Me</b>
             </small>
         </div>
     </div>
