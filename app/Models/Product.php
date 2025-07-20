@@ -32,6 +32,16 @@ class Product extends Model
             'image' => 'image',
         ]);
     }
+    public static function sumPricesByQuantities($products, $productsInSession)
+    {
+        // $product contiene todos los objetos productos, o sea, la informacion individual de cada Product
+        $total = 0;
+        foreach ($products as $product) {
+            // obtenemos las cantidades: $products[$id] = $request->input('quantity');
+            $total = $total + ($product->getPrice() * $productsInSession[$product->getId()]);
+        }
+        return $total;
+    }
     public function getId()
     {
         return $this->attributes['id'];
