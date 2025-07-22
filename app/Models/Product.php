@@ -16,6 +16,7 @@ class Product extends Model
      * $this->attributes['price'] - int - contains the product price
      * $this->attributes['created_at'] - timestamp - contains the product creation date
      * $this->attributes['updated_at'] - timestamp - contains the product update date
+     * $this->items - Item[] - contains the associated items
      */
     protected $fillable = [
         'name',
@@ -101,5 +102,17 @@ class Product extends Model
     public function getUpperedName()
     {
         return strtoupper($this->getName());
+    }
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
+    public function getItems()
+    {
+        return $this->items;
+    }
+    public function setItems($items)
+    {
+        return $this->items = $items;
     }
 }
