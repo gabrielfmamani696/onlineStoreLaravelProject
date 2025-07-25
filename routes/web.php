@@ -24,6 +24,7 @@ Route::post('/cart/add/{id}', 'App\Http\Controllers\CartController@add')->name("
 
 Route::middleware('auth')->group(function() {
     Route::get('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
+    Route::get('/my-account/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myaccount.orders");
 });
 
 Route::middleware('admin')->group(function () {
@@ -34,4 +35,5 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
     Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
 });
+/* Estas rutas (login, logout, register, etc.) no están definidas una por una en routes/web.php. En su lugar, se registran todas juntas con esta única línea: */
 Auth::routes();
