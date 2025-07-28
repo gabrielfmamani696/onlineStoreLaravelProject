@@ -44,7 +44,7 @@ class Item extends Model
     {
         return $this->attributes['quantity'] = $quantity;
     }
-    public function getPrice($price)
+    public function getPrice()
     {
         return $this->attributes['price'];
     }
